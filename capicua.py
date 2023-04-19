@@ -26,8 +26,15 @@ def solicitar_numero():
   return valor
 
 def es_capicua(num):
+  # para numeros de un digito se consideran capicua
+  aux = num
+  inv = aux % BASE_NUMERICA
 
-  return False
+  while (aux >= BASE_NUMERICA):
+    aux = aux // BASE_NUMERICA
+    inv = (inv * BASE_NUMERICA) + (aux % BASE_NUMERICA)
+
+  return es_igual(inv, num)
 
 def procesar_serie():
   numero = solicitar_numero()
