@@ -6,7 +6,10 @@ Se debe evaluar que lo ingresado, sea un número entero positivo; de lo contrari
 se debe enviar el mensaje “Número Inválido”, y solicitar el siguiente.
 El ingreso de números, termina cuando en lugar de un número positivo, el usuario ingresa 0.
 """
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/capicua-experimental
 BASE_NUMERICA = 10
 
 def es_igual(x, y):
@@ -26,15 +29,7 @@ def solicitar_numero():
   return valor
 
 def es_capicua(num):
-  # para numeros de un digito se consideran capicua
-  aux = num
-  inv = aux % BASE_NUMERICA
-
-  while (aux >= BASE_NUMERICA):
-    aux = aux // BASE_NUMERICA
-    inv = (inv * BASE_NUMERICA) + (aux % BASE_NUMERICA)
-
-  return es_igual(inv, num)
+  return False
 
 def procesar_serie():
   numero = solicitar_numero()
